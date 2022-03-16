@@ -1,0 +1,84 @@
+.messages {
+    position: relative;
+    background: #F9FBFF;
+    width: 100%;
+    opacity: 0.85;
+    top: 0;
+    height: 100%;
+  }
+
+.typing {
+    position: absolute;
+    bottom: 6%;
+    left: 20px;
+  }
+
+.bubble {
+    margin-bottom: 5px;
+    color: #F9FBFF;
+    font-size: 0.7em;
+    border-radius: 20px;
+    background: rgba(140, 140, 140, 0.3);
+    padding: 8px 13px 9px 13px;
+}
+
+.incoming {
+    display: inline-block;
+    max-width: 50%;
+    padding: 15px;
+}
+
+.outgoing {
+    display: table;
+    margin-left: auto;
+    max-width: 50%;
+    padding: 15px;
+    background: rgba(140, 140, 140, 0.8);
+}
+
+.ellipsis {
+    width: 5px;
+    height: 5px;
+    display: inline-block;
+    background: rgb(143, 143, 143);
+    margin: 0 2px;
+    border-radius: 50%;
+    animation: bounce 1.1s linear infinite;
+}
+
+.e-1 {
+    animation-delay: .5s;
+}
+
+.e-2 {
+    animation-delay: .7s;
+}
+
+.e-3 {
+    animation-delay: .9s;
+}
+
+.bottom-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(235, 235, 235);
+}
+
+.bottom-bar > div:first-of-type {
+    display: inline-block;
+    margin: 10px 20px;
+}
+
+.send-icon {
+    transform: translate(-10px, 5px);
+    float: right;
+}
+
+@keyframes bounce {
+    30% { transform: translateY(-2px); }
+    60% { transform: translateY(0px); }
+    80% { transform: translateY(2px); }
+    100% { transform: translateY(0px); opacity: 0.5;  }
+}
