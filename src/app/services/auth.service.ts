@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { GoogleAuthProvider } from 'firebase/auth';
+import { FacebookAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 @Injectable({
@@ -9,13 +9,21 @@ export class AuthService {
   
   constructor(public auth: AngularFireAuth) {}
   
-  public GoogleAuth(): Promise<void> {
-    return this.AuthLogin(new GoogleAuthProvider());
+  public googleAuth(): Promise<void> {
+    return this.authLogin(new GoogleAuthProvider());
+  }
+
+  public facebookAuth(): Promise<void> {
+    return this.authLogin(new FacebookAuthProvider());
+  }
+
+  public signOut(): void {
+    this.auth.signOut().then().catch();
   }
   
-  private AuthLogin(provider: GoogleAuthProvider): Promise<void> {
+  private authLogin(provider: GoogleAuthProvider | FacebookAuthProvider): Promise<void> {
     return this.auth
-      .signInWithPopup(provider)
+      .signInWithRedirect(provider)
       .then((result) => {
         console.log(result);
       })
