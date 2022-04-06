@@ -1,24 +1,30 @@
-<div class="messages">
-    <div class="message-container" *ngFor="let message of mockMessages">
-        <div class="bubble" [ngClass]="{'incoming': message.id === 1, 'outgoing': message.id === 2}">
-            {{message.message}}
-        </div>
+<div class="page-container">
+    <div class="sidebar-container" [ngClass]="{'sidebar-active': globalService.slectedSidebarAction >= 0}">
+        <app-sidebar></app-sidebar>
     </div>
 
-    <div class="typing">
-        <div class="bubble">
-          <div class="ellipsis e-1"></div>
-          <div class="ellipsis e-2"></div>
-          <div class="ellipsis e-3"></div>
+    <div class="messages">
+        <div class="message-container" *ngFor="let message of mockMessages">
+            <div class="bubble" [ngClass]="{'incoming': message.id === 1, 'outgoing': message.id === 2}">
+                {{message.message}}
+            </div>
         </div>
-    </div>
-
-    <div class="bottom-bar">
-        <div>
-            Type a message
+    
+        <div class="typing">
+            <div class="bubble">
+              <div class="ellipsis e-1"></div>
+              <div class="ellipsis e-2"></div>
+              <div class="ellipsis e-3"></div>
+            </div>
         </div>
-        <div class="send-icon">
-            <mat-icon>send</mat-icon>
+    
+        <div class="bottom-bar">
+            <div>
+                Type a message
+            </div>
+            <div class="send-icon">
+                <mat-icon>send</mat-icon>
+            </div>
         </div>
     </div>
 </div>

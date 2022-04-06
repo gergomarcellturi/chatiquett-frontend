@@ -1,0 +1,53 @@
+.container {
+    display: flex;
+    height: 100%;
+    overflow: hidden;
+}
+
+.sidebar {
+    flex: 0 0 70px;
+    background-color: #1a202c;
+    color: #cbd5e0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.detail {
+    flex: 1;
+    background-color: #1a202c;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.sidebar > div {
+    margin: .7em 0;
+}
+
+.sidebar > div > mat-icon {
+    transform: scale(1.5);
+    padding: 5px;
+    border-radius: 3px;
+    transition: background-color .5s ease-in-out;
+}
+
+.sidebar > div > mat-icon:hover {
+    background-color: #4a5568;
+}
+
+.element-active > mat-icon {
+    background-color: #4a5568;
+}
+
+.account {
+    margin-top: auto !important;
+}
+
+.account > mat-icon {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    background-color: rgb(55 65 81);
+}

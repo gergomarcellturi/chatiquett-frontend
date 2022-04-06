@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GlobalService } from 'src/app/services/global.service';
 
 @Component({
   selector: 'app-home',
@@ -16,7 +17,7 @@ export class HomeComponent implements OnInit {
     {id: 1, message: 'Aenean sed nibh sodales, lacinia orci ut, consectetur sapien. Ut interdum gravida est, at varius erat semper ut.'}
   ];
 
-  constructor() { }
+  constructor(public globalService: GlobalService) { }
 
   ngOnInit(): void {
   }
