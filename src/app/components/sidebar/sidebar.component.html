@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="sidebar">
+        <div [ngClass]="{'element-active': globalService.slectedSidebarAction === 1}" (click)="setActive(1)">
+            <mat-icon>message</mat-icon>
+        </div>
+
+        <div [ngClass]="{'element-active': globalService.slectedSidebarAction === 2}" (click)="setActive(2)">
+            <mat-icon>group</mat-icon>
+        </div>
+
+        <div class="account">
+            <mat-icon>account_circle</mat-icon>
+        </div>
+    </div>
+    <div class="detail">
+        <div *ngIf="globalService.slectedSidebarAction === 1">
+            <div>
+                <mat-icon>search</mat-icon>
+            </div>
+
+            <div>
+                <mat-icon>person_add</mat-icon>
+            </div>
+        </div>
+
+        <div *ngIf="globalService.slectedSidebarAction === 2">
+            <div>
+                <mat-icon>search</mat-icon>
+            </div>
+
+            <div>
+                <mat-icon>group_add</mat-icon>  
+            </div>
+        </div>
+    </div>
+</div>
