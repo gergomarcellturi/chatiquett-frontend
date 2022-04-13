@@ -11,6 +11,14 @@
         <div class="account">
             <mat-icon>account_circle</mat-icon>
         </div>
+
+      <div>
+        <mat-icon (click)="test()">logout</mat-icon>
+      </div>
+
+        <div>
+          <mat-icon (click)="auth.signOut()">logout</mat-icon>
+        </div>
     </div>
     <div class="detail">
         <div *ngIf="globalService.slectedSidebarAction === 1">
@@ -29,7 +37,7 @@
             </div>
 
             <div>
-                <mat-icon>group_add</mat-icon>  
+                <mat-icon>group_add</mat-icon>
             </div>
         </div>
     </div>
