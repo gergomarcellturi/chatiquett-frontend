@@ -11,7 +11,6 @@ export class LoginComponent implements OnInit {
   constructor(public authService: AuthService) { }
 
   ngOnInit(): void {
-    this.authService.GoogleAuth();
   }
 
 }
