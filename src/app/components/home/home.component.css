@@ -1,4 +1,22 @@
+.page-container {
+    display: flex;
+    height: 100%;
+}
+
+.sidebar-container {
+    height: 100%;
+    width: 70px;
+    position: absolute;
+    z-index: 5;
+    transition: width .7s ease-in-out;
+}
+
+.sidebar-active {
+    width: 300px;
+}
+
 .messages {
+    margin-left: 70px;
     position: relative;
     background: #F9FBFF;
     width: 100%;
@@ -77,8 +95,16 @@
 }
 
 @keyframes bounce {
-    30% { transform: translateY(-2px); }
-    60% { transform: translateY(0px); }
-    80% { transform: translateY(2px); }
-    100% { transform: translateY(0px); opacity: 0.5;  }
+    30% {
+        transform: translateY(-2px);
+    }
+    60% {
+        transform: translateY(0px);
+    }
+    80% {
+        transform: translateY(2px);
+    }
+    100% {
+        transform: translateY(0px); opacity: 0.5;
+    }
 }
